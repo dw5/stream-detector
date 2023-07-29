@@ -1,4 +1,22 @@
 {
+	"notifPref": {
+		"message": "Disable all notifications"
+	},
+	"noCookies": {
+		"message": "Disable reading browser  (yt-dlp --cookies-from-browser)"
+	},
+	"disablePref": {
+		"message": "Disable detection"
+	},
+	"notifDetectPref": {
+		"message": "Disable detection notifications"
+	},
+	"noRestorePref": {
+		"message": "Disable previous session functionality (clear entries on launch)"
+	},
+	"webTitlesBrandingRM": {
+		"message": "Remove website branding \" - Websitename\" when using page titles for filenames"
+	},
 	"autoDownloadPref": {
 		"message": "Automatically download non-manifest files"
 	},
@@ -40,9 +58,6 @@
 	},
 	"deleteTooltip": {
 		"message": "Click to delete URL."
-	},
-	"disablePref": {
-		"message": "Disable detection"
 	},
 	"downloadDirectPref": {
 		"message": "Download non-manifest files instead of copying their URLs"
@@ -110,17 +125,11 @@
 	"nm3u8dl": {
 		"message": "N_m3u8DL-RE command"
 	},
-	"noRestorePref": {
-		"message": "Disable previous session functionality (clear entries on launch)"
-	},
 	"notifCopiedText": {
 		"message": "Successfully copied the following URL(s):\n"
 	},
 	"notifCopiedTitle": {
 		"message": "URL(s) copied!"
-	},
-	"notifDetectPref": {
-		"message": "Disable detection notifications"
 	},
 	"notifDownErrorText": {
 		"message": "Unable to download URL:\n"
@@ -142,12 +151,6 @@
 	},
 	"notifManyTitle": {
 		"message": "Multiple streams detected!"
-	},
-	"notifPref": {
-		"message": "Disable all notifications"
-	},
-	"noCookies": {
-		"message": "Disable reading browser cookies"
 	},
 	"notifText": {
 		"message": "New $1 stream detected:\n"
@@ -259,5 +262,8 @@
 	},
 	"ytdlp": {
 		"message": "yt-dlp command"
+	},
+	"m3u8dumpsh": {
+		"message": "m3u8 hls dumper bash command"
 	}
 }

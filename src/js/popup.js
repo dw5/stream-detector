@@ -206,7 +206,8 @@ const copyURL = async (info) => {
 					code = code.replace(new RegExp("%cookie%", "g"), headerCookie);
 			} else if (fileMethod === "ytdlp") {
 
-				if (!noCookies){
+				if ((await getStorage("noCookies")) === false) {
+					/* nocookies true won't add this junk */
 				if (!isChrome) code += ` --cookies-from-browser firefox`;
 				else code += ` --cookies-from-browser chrome`;
 			}
@@ -276,9 +277,16 @@ const copyURL = async (info) => {
 			"_"
 		);
 
-		/* TODO, " - Website" removal txt list */
-		// 	outFilename
+		/* Branding " - Website" removal txt list */
+		// Iterate through each web title and remove it from outFilename
+		let webTitlesBrandingRM=(await getStorage("webTitlesBrandingRM"));
+		webTitlesBrandingRM.forEach(title => {
+			outFilename = outFilename.replace(title, "");
+		});
 
+		// Trim any leading or trailing whitespaces after removing web titles
+		outFilename = outFilename.trim();
+		
 		// final part of command (LINK TO VIDEO)
 		if (fileMethod === "ffmpeg") {
 			code += ` -i "${streamURL}" -c copy "${outFilename}`;
@@ -286,6 +294,8 @@ const copyURL = async (info) => {
 			code += `.${outExtension}"`;
 		} else if (fileMethod === "mpv") {
 			code += ` "${streamURL}"`;
+		} else if (fileMethod === "m3u8dumpsh") {
+			code += `m3u8dump.sh "${streamURL}" 1 "${headerReferer}" "${headerUserAgent}"`;
 		} else if (fileMethod === "streamlink") {
 			if ((await getStorage("streamlinkOutput")) === "file") {
 				code += ` -o "${outFilename}`;

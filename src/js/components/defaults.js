@@ -31,6 +31,7 @@ const defaults = {
 	customCommand: "",
 	blacklistPref: false,
 	blacklistEntries: [],
+	webTitlesBrandingRM: [],
 	noRestorePref: false,
 	recentPref: false,
 	recentAmount: "5",

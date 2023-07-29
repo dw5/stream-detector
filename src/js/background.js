@@ -45,6 +45,7 @@ let downloadDirectPref;
 let autoDownloadPref;
 let newline;
 let noCookies;
+let webTitlesBrandingRM;
 
 const customSupported = { ext: [], ct: [], type: "CUSTOM", category: "custom" };
 const isChrome = chrome.runtime.getURL("").startsWith("chrome-extension://");
@@ -71,6 +72,7 @@ const updateVars = async () => {
 	noCookies = await getStorage("noCookies");
 	downloadDirectPref = await getStorage("downloadDirectPref");
 	autoDownloadPref = await getStorage("autoDownloadPref");
+	webTitlesBrandingRM = await getStorage("webTitlesBrandingRM");
 };
 
 const updateIcons = () => {
