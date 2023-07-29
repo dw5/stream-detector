@@ -51,3 +51,5 @@ Upon being notified that a stream has been detected (as in the screenshot above)
 - Development + `npm run build`
 - You'll see folder named `dist` for firefox, `dist-chrome` for that toxic web browser
 - Create zip for those folder and publish to extension places!
+- For DIY .xpi `web-ext sign`  [For Firefox](https://github.com/mozilla/web-ext) `npm install --global web-ext` [More info](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/#Signing_your_extension_for_distribution)
+- For DIY .crx `npm install -g crx3` ??
