@@ -294,8 +294,6 @@ const copyURL = async (info) => {
 			code += `.${outExtension}"`;
 		} else if (fileMethod === "mpv") {
 			code += ` "${streamURL}"`;
-		} else if (fileMethod === "m3u8dumpsh") {
-			code += `m3u8dump.sh "${streamURL}" 1 "${headerReferer}" "${headerUserAgent}"`;
 		} else if (fileMethod === "streamlink") {
 			if ((await getStorage("streamlinkOutput")) === "file") {
 				code += ` -o "${outFilename}`;

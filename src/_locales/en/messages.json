@@ -262,8 +262,5 @@
 	},
 	"ytdlp": {
 		"message": "yt-dlp command"
-	},
-	"m3u8dumpsh": {
-		"message": "m3u8 hls dumper bash command"
 	}
 }
