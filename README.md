@@ -12,9 +12,9 @@ More details and screenshots available [in the AMO listing](https://addons.mozil
 
 ### Where can I download this?
 
-- [The Firefox Addons (AMO) listing.](https://addons.mozilla.org/en-US/firefox/addon/hls-stream-detector/)
-- [The Chrome Web Store listing.](https://chrome.google.com/webstore/detail/the-stream-detector/iakkmkmhhckcmoiibcfjnooibphlobak)
-- [The GitHub releases page.](https://github.com/54ac/stream-detector/releases)
+- [The Firefox Addons (AMO) listing.](https://addons.mozilla.org/en-US/firefox/addon/the-stream-detector-plus/)
+- [The Chrome Web Store listing.](https://chrome.google.com/webstore/detail/jlckmaonnkacoebmnlehgkpjgomfileb)
+- [The GitHub releases page.](https://github.com/dw5/stream-detector/releases)
 
 
 ### What is this written in?
