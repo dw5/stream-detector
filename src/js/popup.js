@@ -228,7 +228,7 @@ const copyURL = async (info) => {
 				else if (fileMethod === "hlsdl")
 					code += ` -h "Referer:${headerReferer}"`;
 				else if (fileMethod === "mpv")
-					code += ` --referer ${headerReferer}"`;
+					code += ` --referrer="${headerReferer}"`;
 				else if (fileMethod === "nm3u8dl")
 					code += ` --header "Referer: ${headerReferer}"`;
 				else if (fileMethod.startsWith("user"))
@@ -279,11 +279,13 @@ const copyURL = async (info) => {
 		/* TODO, " - Website" removal txt list */
 		// 	outFilename
 
-		// final part of command
+		// final part of command (LINK TO VIDEO)
 		if (fileMethod === "ffmpeg") {
 			code += ` -i "${streamURL}" -c copy "${outFilename}`;
 			if (timestampPref) code += ` ${outTimestamp}`;
 			code += `.${outExtension}"`;
+		} else if (fileMethod === "mpv") {
+			code += ` "${streamURL}"`;
 		} else if (fileMethod === "streamlink") {
 			if ((await getStorage("streamlinkOutput")) === "file") {
 				code += ` -o "${outFilename}`;

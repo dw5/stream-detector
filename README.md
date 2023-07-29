@@ -44,7 +44,10 @@ Upon being notified that a stream has been detected (as in the screenshot above)
 - This should go without saying, but I am not responsible for and do not condone this addon being used for any nefarious purposes. Copyrighted content is probably DRM-ed anyway.
 
 ### Development
-- TODO  
+- Node.JS + NPM
+- Install dependencies `npm install`
 
 ### Building for release
-- TODO  
+- Development + `npm run build`
+- You'll see folder named `dist` for firefox, `dist-chrome` for that toxic web browser
+- Create zip for those folder and publish to extension places!
