@@ -1,14 +1,21 @@
-## The Stream Detector
+## The Stream Detector PLUS
 
 ### What is this?
 
-This is a Firefox addon written in JavaScript which provides an easy way to keep track of URLs to playlists and subtitles used by Apple HLS, Adobe HDS, MPEG-DASH, and Microsoft Smooth Streaming streams as well as download video/audio files directly and monitor any other file extensions and Content-Type headers.
+This is a ***Firefox*** addon written in JavaScript which provides an easy way to keep track of URLs to playlists and subtitles used by Apple HLS, Adobe HDS, MPEG-DASH, and Microsoft Smooth Streaming streams as well as download video/audio files directly and monitor any other file extensions and Content-Type headers.
 
-Also assembles readymade yt-dlp/FFmpeg/Streamlink/hlsdl/N_m3u8DL-RE commands which (should) include all of the necessary cookies and headers.
+Also assembles readymade yt-dlp/FFmpeg/Streamlink/hlsdl/N_m3u8DL-RE/mpv commands which (should) include all of the necessary cookies and headers.
 
 ![A screenshot of the options menu.](https://addons.mozilla.org/user-media/previews/full/274/274526.png)
 
 More details and screenshots available [in the AMO listing](https://addons.mozilla.org/en-US/firefox/addon/hls-stream-detector/) or the [Web Store listing](https://chrome.google.com/webstore/detail/the-stream-detector/iakkmkmhhckcmoiibcfjnooibphlobak) of the Chrome port.
+
+### Where can I download this?
+
+- [The Firefox Addons (AMO) listing.](https://addons.mozilla.org/en-US/firefox/addon/hls-stream-detector/)
+- [The Chrome Web Store listing.](https://chrome.google.com/webstore/detail/the-stream-detector/iakkmkmhhckcmoiibcfjnooibphlobak)
+- [The GitHub releases page.](https://github.com/54ac/stream-detector/releases)
+
 
 ### What is this written in?
 
@@ -24,26 +31,20 @@ More details and screenshots available [in the AMO listing](https://addons.mozil
 
 Being able to easily find direct URLs to streams on the Internet. I wrote this initially for my own use - I was fed up with hunting for URLs in the Network Monitor and manually adding all the necessary headers and cookies.
 
-### Is anyone even using this?
-
-As of updating this document, the addon is at approx. 12,000 average daily users and 2,500 downloads in the last 30 days.
-
 ### How do I use this?
 
 Upon being notified that a stream has been detected (as in the screenshot above), click the toolbar button, and then click on the appropriate filename to copy the URL in its desired form. Use the addon's options page to customize your experience and e.g. download media files directly.
-
-### Where can I download this?
-
-- [The Firefox Addons (AMO) listing.](https://addons.mozilla.org/en-US/firefox/addon/hls-stream-detector/)
-- [The Chrome Web Store listing.](https://chrome.google.com/webstore/detail/the-stream-detector/iakkmkmhhckcmoiibcfjnooibphlobak)
-- [The GitHub releases page.](https://github.com/54ac/stream-detector/releases)
 
 ---
 
 ### Additional notes
 
-- After over 100 closed issues and 60 GitHub releases, as of v2.11, the repo is being archived until further notice due to lack of free time and focusing on work and other projects. Serious issues and minor features might still be addressed, but active development has been put on hold.
-- The Chrome version of this addon is not maintained or supported in any way. It's only published on the off chance that it works. Don't expect it to.
-- Feel free to submit a translation by way of a pull request if the addon is not available in your preferred language.
-- Websites such as YouTube, Vimeo, Facebook, etc. are very likely to use proprietary technologies which are not supported by this addon. When it comes to such "mainstream" services, it's better to use the tools (e.g. yt-dlp) directly.
+- The Chrome version of this addon is not maintained or supported in any way. It's only published as-is on the off chance that it works. Don't expect it to.
+- Websites such as YouTube, Vimeo, Facebook, etc. are very likely to use proprietary technologies which are not supported by this addon.
 - This should go without saying, but I am not responsible for and do not condone this addon being used for any nefarious purposes. Copyrighted content is probably DRM-ed anyway.
+
+### Development
+- TODO  
+
+### Building for release
+- TODO  

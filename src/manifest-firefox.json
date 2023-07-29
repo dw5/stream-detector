@@ -1,5 +1,5 @@
 {
-	"name": "The Stream Detector",
+	"name": "The Stream Detector PLUS",
 	"version": "2.11.7",
 	"description": "__MSG_extText__",
 	"manifest_version": 2,
@@ -59,7 +59,7 @@
 		]
 	},
 	"sidebar_action": {
-		"default_title": "The Stream Detector",
+		"default_title": "The Stream Detector PLUS",
 		"default_panel": "sidebar.html",
 		"default_icon": {
 			"16": "img/icon-dark-16.png",

@@ -143,6 +143,9 @@
 	"notifPref": {
 		"message": "Disable all notifications"
 	},
+	"noCookies": {
+		"message": "Disable reading browser cookies"
+	},
 	"notifText": {
 		"message": "New $1 stream detected:\n"
 	},

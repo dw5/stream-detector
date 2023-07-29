@@ -44,6 +44,7 @@ let notifPref;
 let downloadDirectPref;
 let autoDownloadPref;
 let newline;
+let noCookies;
 
 const customSupported = { ext: [], ct: [], type: "CUSTOM", category: "custom" };
 const isChrome = chrome.runtime.getURL("").startsWith("chrome-extension://");
@@ -67,6 +68,7 @@ const updateVars = async () => {
 	disablePref = await getStorage("disablePref");
 	notifDetectPref = await getStorage("notifDetectPref");
 	notifPref = await getStorage("notifPref");
+	noCookies = await getStorage("noCookies");
 	downloadDirectPref = await getStorage("downloadDirectPref");
 	autoDownloadPref = await getStorage("autoDownloadPref");
 };

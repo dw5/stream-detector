@@ -91,10 +91,14 @@ const copyURL = async (info) => {
 				titlePref && e.tabData?.title && !streamURL.includes(e.tabData.title)
 					? e.tabData.title
 					: e.hostname
-			} | ${getTimestamp(e.timeStamp)}`;
+			} | ${getTimestamp(e.timeStamp)}`; 
+			
+			/* wtf is this mess, yandare dev? */
+
 		else if (fileMethod === "kodiUrl") code = streamURL;
 		else if (fileMethod === "ffmpeg") code = "ffmpeg";
 		else if (fileMethod === "streamlink") code = "streamlink";
+		else if (fileMethod === "mpv") code = "mpv";
 		else if (fileMethod === "ytdlp") {
 			code = "yt-dlp --no-part --restrict-filenames";
 
@@ -201,8 +205,12 @@ const copyURL = async (info) => {
 				else if (fileMethod.startsWith("user"))
 					code = code.replace(new RegExp("%cookie%", "g"), headerCookie);
 			} else if (fileMethod === "ytdlp") {
+
+				if (!noCookies){
 				if (!isChrome) code += ` --cookies-from-browser firefox`;
 				else code += ` --cookies-from-browser chrome`;
+			}
+
 			} else if (fileMethod.startsWith("user"))
 				code = code.replace(new RegExp("%cookie%", "g"), "");
 
@@ -219,6 +227,8 @@ const copyURL = async (info) => {
 					code += ` --referer "${headerReferer}"`;
 				else if (fileMethod === "hlsdl")
 					code += ` -h "Referer:${headerReferer}"`;
+				else if (fileMethod === "mpv")
+					code += ` --referer ${headerReferer}"`;
 				else if (fileMethod === "nm3u8dl")
 					code += ` --header "Referer: ${headerReferer}"`;
 				else if (fileMethod.startsWith("user"))
@@ -265,6 +275,9 @@ const copyURL = async (info) => {
 			/[/\\?%*:|"<>]/g,
 			"_"
 		);
+
+		/* TODO, " - Website" removal txt list */
+		// 	outFilename
 
 		// final part of command
 		if (fileMethod === "ffmpeg") {
